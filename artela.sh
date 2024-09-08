@@ -135,7 +135,7 @@ EOF
   # Сброс
   echo -e "${GREEN}Сброс ноды Artela...${NC}"
   artelad tendermint unsafe-reset-all --home $HOME/.artelad --keep-addr-book
-  curl https://testnet-files.itrocket.net/artela/snap_artela.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.artelad
+  curl "https://snapshots-testnet.nodejumper.io/artela-testnet/artela-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.artelad"
 
   # Запуск службы
   echo -e "${GREEN}Запуск службы Artela...${NC}"
